@@ -23,7 +23,11 @@ provider "aws" {
 resource "aws_s3_bucket" "bucket" {
   bucket = "${var.bucket_name}"
   acl    = "${var.bucket_acl}" 
+  
+  server_side_encryption_configuration {
 
+  }
+  
   tags {
     Name        = "Roger Test Bucket"
     Owner = "roger@hashicorp.com"
