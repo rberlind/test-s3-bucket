@@ -25,7 +25,9 @@ resource "aws_s3_bucket" "bucket" {
   acl    = "${var.bucket_acl}" 
   
   server_side_encryption_configuration {
-
+    rule {
+      
+    }
   }
   
   tags {
