@@ -33,6 +33,11 @@ resource "aws_s3_bucket" "bucket" {
     }
   }
   
+  versioning {
+    enabled = true
+    mfa_delete = true
+  }
+  
   tags {
     name        = "Roger Test Bucket"
     Owner = "roger@hashicorp.com"
