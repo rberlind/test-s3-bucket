@@ -38,6 +38,10 @@ resource "aws_s3_bucket" "bucket" {
     mfa_delete = true
   }
   
+  logging {
+    target_bucket = "roger-bucket"
+  }
+  
   tags {
     name        = "Roger Test Bucket"
     Owner = "roger@hashicorp.com"
