@@ -34,9 +34,16 @@ resource "aws_s3_bucket" "bucket" {
   }
   
   tags {
-    Name        = "Roger Test Bucket"
+    name        = "Roger Test Bucket"
     Owner = "roger@hashicorp.com"
     website = "true"
+    application_id = "456"
+    stack_name = "roger"
+    description = "roger"
+    termination_date = "12/25/2019"
+    created_by = "roger"
+    data_class = "protected"
+    environment = "dev" 
   }
 }
 
