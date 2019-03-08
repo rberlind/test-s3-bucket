@@ -33,6 +33,10 @@ resource "aws_s3_bucket" "bucket" {
     }
   }
   
+  versioning {
+    enabled = true
+  }
+  
   tags {
     Name        = "Roger Test Bucket"
     Owner = "roger@hashicorp.com"
