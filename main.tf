@@ -13,7 +13,7 @@ variable "bucket_name" {
 
 variable "bucket_acl" {
    description = "ACL for S3 bucket: private, public-read, public-read-write, etc"
-   default = "public-read""
+   default = "public-read"
 }
 
 provider "aws" {
