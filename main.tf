@@ -13,7 +13,7 @@ variable "bucket_name" {
 
 variable "bucket_acl" {
    description = "ACL for S3 bucket: private, public-read, public-read-write, etc"
-   default = "public-read"
+   default = "public-read""
 }
 
 provider "aws" {
@@ -28,8 +28,7 @@ resource "aws_s3_bucket" "bucket" {
     rule {
       apply_server_side_encryption_by_default {
         kms_master_key_id = "arn:aws:kms:us-east-1:753646501470:key/00c892e8-40c4-4048-a650-0f755876503d"
-        #sse_algorithm     = "aws:kms"
-        sse_algorithm     = "AES256"
+        sse_algorithm     = "aws:kms"
       }
     }
   }
